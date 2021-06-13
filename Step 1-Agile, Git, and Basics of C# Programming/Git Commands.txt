@@ -1,0 +1,10 @@
+The important commands
+
+After make a changes:
+
+$ git add .
+
+$ git commit -m "Put a comment here"
+
+
+$ git push origin master
