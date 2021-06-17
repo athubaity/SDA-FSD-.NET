@@ -1,0 +1,6 @@
+1,Adel Abdullah,SWE101_01 ICS102_02 ICS102_52
+2,Ahmed Khaled,UI101_01
+3,Ahmed Meli,Phys102_04 Phys102_56
+4,Asem Alqarni,Chem101_01 Chem101_51
+5,Aymen Almelh,COE101_05
+6,Saeed Abdullah,Arabic101_01
