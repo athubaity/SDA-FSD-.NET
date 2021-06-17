@@ -4,3 +4,4 @@
 4,Asem Alqarni,Chem101_01 Chem101_51
 5,Aymen Almelh,COE101_05
 6,Saeed Abdullah,Arabic101_01
+7,Adel Abdullah Althubaity,UI_01 HTML_01 CSS_01
