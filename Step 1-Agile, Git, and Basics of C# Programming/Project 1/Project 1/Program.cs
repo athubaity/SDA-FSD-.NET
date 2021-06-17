@@ -21,7 +21,7 @@ namespace Project_1
                 TeacherFile.OpenFile(file);
             }catch(Exception e)
             {
-                Console.WriteLine($"This error have been occured: {e}, while trying open the text file");
+                Console.WriteLine($"This error have been occured, while trying open the text file");
             }
 
             while (!end)
@@ -33,7 +33,7 @@ namespace Project_1
                 }
                 catch (Exception e)
                 {
-                    Console.WriteLine($"This error have been occured: {e}, while trying choose one of the choices");
+                    Console.WriteLine($"This error have been occured, while trying choose one of the choices");
                 }
             }
         }
@@ -69,7 +69,7 @@ namespace Project_1
                     teacher.addTeacher();
                     break;
                 case 2:
-
+                    teacher.UpdateTeacher();
                     break;
                 case 3:
                     teacher.RetriveTeachersList();

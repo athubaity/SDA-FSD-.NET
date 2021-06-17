@@ -4,4 +4,3 @@ C:\Users\abo saad\Desktop\SDA-FSD-.NET\Step 1-Agile, Git, and Basics of C# Progr
 C:\Users\abo saad\Desktop\SDA-FSD-.NET\Step 1-Agile, Git, and Basics of C# Programming\Project 1\Project 1\obj\Debug\Project 1.csproj.CoreCompileInputs.cache
 C:\Users\abo saad\Desktop\SDA-FSD-.NET\Step 1-Agile, Git, and Basics of C# Programming\Project 1\Project 1\obj\Debug\Project 1.exe
 C:\Users\abo saad\Desktop\SDA-FSD-.NET\Step 1-Agile, Git, and Basics of C# Programming\Project 1\Project 1\obj\Debug\Project 1.pdb
-C:\Users\abo saad\Desktop\SDA-FSD-.NET\Step 1-Agile, Git, and Basics of C# Programming\Project 1\Project 1\obj\Debug\Project 1.csprojAssemblyReference.cache
