@@ -1,0 +1,36 @@
+{
+    "Product":[
+        {
+            "id": 1,
+            "image": "https://i.imgur.com/vEJS7bI.png",
+            "name": "apple",
+            "category": "fruit",
+            "quantity": 5, 
+            "price": 0.5
+        },
+        {
+            "id": 2,
+            "image": "https://i.imgur.com/USYjIGt.png",
+            "name": "panana",
+            "category": "fruit",
+            "quantity": 10, 
+            "price": 0.3
+        },
+        {
+            "id": 3,
+            "image": "https://i.imgur.com/nfsw709.png",
+            "name": "lemon",
+            "category": "fruit",
+            "quantity": 8, 
+            "price": 0.35
+        },
+        {
+            "id": 4,
+            "image": "https://i.imgur.com/McqFfrx.png",
+            "name": "mango",
+            "category": "fruit",
+            "quantity": 15, 
+            "price": 0.5
+        }
+    ]
+}

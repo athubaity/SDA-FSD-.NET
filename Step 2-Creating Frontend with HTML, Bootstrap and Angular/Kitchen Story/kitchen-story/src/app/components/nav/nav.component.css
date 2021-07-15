@@ -1,0 +1,25 @@
+.pb-3 {
+    padding-bottom: 1rem!important;
+}
+.mb-4 {
+    margin-bottom: 1.5rem!important;
+}
+.align-items-center {
+    align-items: center!important;
+}
+.flex-column {
+    flex-direction: column!important;
+}
+.border-bottom {
+    border-bottom: 1px solid #dee2e6!important;
+}
+.d-flex {
+    display: flex!important;
+}
+nav {
+    display: block;
+}
+div {
+    background: rgb(255,255,255);
+    background: linear-gradient(0deg, rgba(255,255,255,0) 40%, rgba(195,253,45,0.904) 60%);
+}
