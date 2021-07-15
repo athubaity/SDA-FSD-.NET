@@ -1,5 +1,5 @@
 <!-- Card -->
-<div *ngFor="let product of products">
+<div *ngFor="let product of products | paginate: {itemsPerPage:12,currentPage:p}">
   <div class="card shadow">
     <div class="view hm-zoom">
       <img class="img-fluid w-100" src="{{product.image}}" alt="">

@@ -11,7 +11,7 @@ import { ProductService } from 'src/app/services/product.service';
 export class ProductsComponent implements OnInit {
   
   @Input() products: Product[] = [];
-  
+  @Input() p: number=1;
   constructor() {
   }
 
