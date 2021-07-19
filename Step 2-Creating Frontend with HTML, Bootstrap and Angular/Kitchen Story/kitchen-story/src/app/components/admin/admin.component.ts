@@ -1,3 +1,5 @@
+import { Router } from '@angular/router';
+import { AuthService } from 'src/app/services/auth.service';
 import { NgForm } from '@angular/forms';
 import { Product } from 'src/app/model/Products';
 import { Component, OnInit } from '@angular/core';
@@ -15,6 +17,7 @@ export class AdminComponent implements OnInit {
   productlist : Product[] = [];
   p: number = 1;
   name: any;
+  isLoggedin: boolean;
   product: Product = {
     id: 0,
     image: '',
@@ -45,7 +48,11 @@ export class AdminComponent implements OnInit {
     this.service.deleteProduct(deleteme);
   }
 
-  constructor(public service: ProductService) {
+  constructor(public service: ProductService,
+     public auth: AuthService,
+     public router: Router) {
+    this.isLoggedin = this.auth.isLoggedin();
+    this.statusLog();
    }
 
   ngOnInit(): void {
@@ -71,4 +78,17 @@ export class AdminComponent implements OnInit {
     }
   }
 
+  statusLog(){
+    this.isLoggedin = this.auth.isLoggedin();
+    console.log(this.isLoggedin);
+    if(this.isLoggedin === false){
+      this.router.navigate(['../']); 
+    }
+  }
+  
+  logout(){
+    console.log('logout');
+    this.auth.Logout();
+    this.statusLog();
+  }
 }

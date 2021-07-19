@@ -1,11 +1,11 @@
 <div id="main" class="d-flex flex-column flex-md-row align-items-center pb-3 mb-4 border-bottom">
-    <a href="/" class="d-flex align-items-center text-dark text-decoration-none">
+    <a href="/admin" class="d-flex align-items-center text-dark text-decoration-none">
       <img class="mb-2" src="https://freepikpsd.com/media/2019/11/grocery-store-logo-transparent-png-images-.png" alt="" width="150" height="120">
       <span id="logo">Kitchen Story</span>
     </a>
       <nav class="d-inline-flex mt-2 mt-md-0 ms-md">
-        <a class="btn btn-lg me-3 py-2 text-dark text-decoration-none" 
-        [routerLink]="['signup']" routerLinkActive="active">Sign up</a>
+        <a class="btn btn-lg me-3 py-2 text-dark text-decoration-none" *ngIf="isLoggedin" (click)="logout()">Logout</a>
+          <a class="btn btn-lg me-3 py-2 text-dark text-decoration-none" [routerLink]="['../reset-password']" routerLinkActive="active">Reset Password</a>
         <a class="btn btn-lg me-3 py-2 text-dark text-decoration-none" href="#">Support</a>
       </nav>
     

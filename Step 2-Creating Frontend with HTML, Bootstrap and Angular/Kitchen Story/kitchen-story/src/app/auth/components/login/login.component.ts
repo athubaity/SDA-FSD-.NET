@@ -25,7 +25,11 @@ export class LoginComponent implements OnInit {
   Login(email: any, password: any){
     this.auth.Login(email,password);
     if (this.auth.isLoggedin()) {
-      this.router.navigate(['../']);
+      if(this.auth.getUserType() === 1){
+        this.router.navigate(['../admin']); 
+      }else if(this.auth.getUserType() === 2){
+        this.router.navigate(['../']); 
+      }
     }
   }
 

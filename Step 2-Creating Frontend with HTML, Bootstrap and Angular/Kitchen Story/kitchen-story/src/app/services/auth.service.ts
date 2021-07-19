@@ -54,13 +54,29 @@ export class AuthService {
       }
     );
   }
-  getUserType(){
+  getUserType() : number{
     const myData = JSON.parse(localStorage.getItem('myuser') || '{}');
-    console.log(myData);
-    return myData;
+    console.log(myData.type);
+    return myData.type;
   }
   getUsers(){
     return this.http.get<User[]>(this.Userurl);
   }
 
+  resetPassword(newPass: string){
+    const myData = JSON.parse(localStorage.getItem('myuser') || '{}');
+    myData.password = newPass;
+    this.updateUser(myData);
+  }
+
+  updateUser(user: any){
+    this.http.put(`${this.Userurl}/${user.id}`, user).subscribe(
+      data => {
+        console.log('POST Request is successful ', data);
+      },
+      error => {
+        console.log('Error', error);
+      }
+    );
+  }
 }
