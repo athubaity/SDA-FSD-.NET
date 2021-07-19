@@ -1,1 +1,76 @@
-<p>admin works!</p>
+<div id="main" class="d-flex flex-column flex-md-row align-items-center pb-3 mb-4 border-bottom">
+    <a href="/" class="d-flex align-items-center text-dark text-decoration-none">
+      <img class="mb-2" src="https://freepikpsd.com/media/2019/11/grocery-store-logo-transparent-png-images-.png" alt="" width="150" height="120">
+      <span id="logo">Kitchen Story</span>
+    </a>
+      <nav class="d-inline-flex mt-2 mt-md-0 ms-md">
+        <a class="btn btn-lg me-3 py-2 text-dark text-decoration-none" 
+        [routerLink]="['signup']" routerLinkActive="active">Sign up</a>
+        <a class="btn btn-lg me-3 py-2 text-dark text-decoration-none" href="#">Support</a>
+      </nav>
+    
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-lg">
+            <div class="container mt-5">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card shadow mb-4">
+                            <div class="card-header py-3">
+                                <h4 class="font-weight-bold ">Products list</h4>
+                            </div>
+                            <div class="card-body">
+                                <form class="text-center border border-light p-5" #f="ngForm" (ngSubmit)="addPrd()">
+                                    <input required name="image" type="text" class="form-control ng-valid" placeholder="image link" [(ngModel)]="product.image">
+                                    <input required name="name" type="text" class="form-control ng-valid" placeholder="product name" [(ngModel)]="product.name">
+                                    <input required name="category" type="text" class="form-control ng-valid" placeholder="category" [(ngModel)]="product.category">
+                                    <input required name="quantity" type="number" class="form-control ng-valid" placeholder="quantity" [(ngModel)]="product.quantity">
+                                    <input required name="price" type="number" class="form-control ng-valid" placeholder="price" [(ngModel)]="product.price">
+                                    <button type="submit" class="btn btn-danger mt-3" [disabled]="f.invalid">Add prodduct</button>
+                                </form>
+                                <div class="row">
+                                    <form>
+                                        <input class="form-control" type="text" name="name" [(ngModel)]="name" (ngModelChange)="Search()" placeholder="Search" aria-label="Search">
+                                    </form>
+                                </div>
+                                <table class="table table-bordered mt-2 mt-md-0 ms-md" >
+                                    <thead class="thead-light">
+                                        <tr>
+                                            <th>id</th>
+                                            <th>image</th>
+                                            <th>name</th>
+                                            <th>category</th>
+                                            <th>quantity</th>
+                                            <th>price</th>
+                                            <th>delete</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr *ngFor="let prd of productlist |  paginate: {itemsPerPage:10,currentPage:p}">
+                                            <td>{{prd.id}}</td>
+                                            <td><img class="img-fluid w-50" src="{{prd.image}}" alt=""></td>
+                                            <td>{{prd.name}}</td>
+                                            <td>{{prd.category}}</td>
+                                            <td>{{prd.quantity}}</td>
+                                            <td>{{prd.price}}</td>
+                                            <td>
+                                                <button (click)="ondelete(prd.id)" class="btn btn-success">Remove Product</button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                    <pagination-controls (pageChange) = "p = $event"></pagination-controls>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg">
+            <app-footer></app-footer>
+        </div>
+    </div>
+</div>

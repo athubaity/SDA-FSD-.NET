@@ -1,3 +1,5 @@
+import { User } from 'src/app/model/Users';
+import { AuthService } from 'src/app/services/auth.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +9,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavComponent implements OnInit {
 
-  constructor() { }
+  myuser: User;
+  isLoggedin: boolean;
+  constructor(public auth: AuthService) { 
+    this.myuser = auth.getMyUser();
+    this.isLoggedin = this.auth.isLoggedin();
+    this.statusLog();
+  }
 
+  statusLog(){
+    this.isLoggedin = this.auth.isLoggedin();
+    console.log(this.isLoggedin);
+  }
   ngOnInit(): void {
+  }
+
+  logout(){
+    console.log('logout');
+    this.auth.Logout();
+    this.statusLog();
   }
 
 }

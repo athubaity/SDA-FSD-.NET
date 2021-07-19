@@ -3,6 +3,12 @@
     margin: 0.5em;
     align-items: center;
 }
+
 .quantity{
     width: fit-content;
+}
+
+img{
+    height: 150px;
+    width: 50px;
 }

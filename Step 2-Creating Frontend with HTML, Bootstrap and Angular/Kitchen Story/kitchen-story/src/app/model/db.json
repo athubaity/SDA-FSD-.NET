@@ -1,36 +1,64 @@
 {
-    "Product":[
-        {
-            "id": 1,
-            "image": "https://i.imgur.com/vEJS7bI.png",
-            "name": "apple",
-            "category": "fruit",
-            "quantity": 5, 
-            "price": 0.5
-        },
-        {
-            "id": 2,
-            "image": "https://i.imgur.com/USYjIGt.png",
-            "name": "panana",
-            "category": "fruit",
-            "quantity": 10, 
-            "price": 0.3
-        },
-        {
-            "id": 3,
-            "image": "https://i.imgur.com/nfsw709.png",
-            "name": "lemon",
-            "category": "fruit",
-            "quantity": 8, 
-            "price": 0.35
-        },
-        {
-            "id": 4,
-            "image": "https://i.imgur.com/McqFfrx.png",
-            "name": "mango",
-            "category": "fruit",
-            "quantity": 15, 
-            "price": 0.5
-        }
-    ]
+  "Product": [
+    {
+      "id": 1,
+      "image": "https://i.imgur.com/vEJS7bI.png",
+      "name": "apple",
+      "category": "fruit",
+      "quantity": 5,
+      "price": 0.5
+    },
+    {
+      "id": 2,
+      "image": "https://i.imgur.com/USYjIGt.png",
+      "name": "panana",
+      "category": "fruit",
+      "quantity": 10,
+      "price": 0.3
+    },
+    {
+      "id": 3,
+      "image": "https://i.imgur.com/nfsw709.png",
+      "name": "lemon",
+      "category": "fruit",
+      "quantity": 8,
+      "price": 0.35
+    },
+    {
+      "id": 4,
+      "image": "https://i.imgur.com/McqFfrx.png",
+      "name": "mango",
+      "category": "fruit",
+      "quantity": 15,
+      "price": 0.5
+    },
+    {
+      "id": 5,
+      "image": "https://dg6qn11ynnp6a.cloudfront.net/wp-content/uploads/2018/01/12115055/Pepsi-12-oz.-can-with-Limited-Edition-Retro-Packaging-213x320.png",
+      "name": "Pepsi",
+      "category": "drink",
+      "quantity": 24,
+      "price": 0.8
+    }
+  ],
+  "User": [
+    {
+      "id": 1,
+      "type": 1,
+      "fname": "Adel",
+      "lname": "A",
+      "email": "adel@kitchen.com",
+      "password": "A1234567",
+      "phone": "0505050505"
+    },
+    {
+      "id": 2,
+      "type": 2,
+      "fname": "Nawaf",
+      "lname": "A",
+      "email": "nawaf@gmail.com",
+      "password": "Na123456",
+      "phone": "0505051122"
+    }
+  ]
 }

@@ -1,3 +1,4 @@
+import { RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
@@ -14,6 +15,9 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { Ng2OrderModule } from 'ng2-order-pipe';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CartComponent } from './components/cart/cart.component';
+import { AuthModule } from './auth/auth.module';
+import { MainComponent } from './main/main.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +27,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     HeaderComponent,
     FooterComponent,
     NavComponent,
-    ProductsListComponent
+    ProductsListComponent,
+    CartComponent,
+    MainComponent
   ],
   imports: [
     BrowserModule,
@@ -33,7 +39,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     Ng2SearchPipeModule,
     Ng2OrderModule,
     NgxPaginationModule,
-    FormsModule
+    FormsModule,
+    AuthModule,
+    RouterModule
   ],
   providers: [],
   bootstrap: [AppComponent]
