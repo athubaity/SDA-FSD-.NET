@@ -28,7 +28,6 @@ export class AdminComponent implements OnInit {
   }
   addPrd(){
     this.product.id++;
-    console.log(this.product.id);
     this.onclick(this.product.id, this.product.image, this.product.name, this.product.category, this.product.quantity, this.product.price);
   }
 
@@ -80,7 +79,6 @@ export class AdminComponent implements OnInit {
 
   statusLog(){
     this.isLoggedin = this.auth.isLoggedin();
-    console.log(this.isLoggedin);
     if(this.isLoggedin === false){
       this.router.navigate(['../']); 
     }

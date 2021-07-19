@@ -21,6 +21,7 @@ export class ResetPasswordComponent implements OnInit {
     if(this.Password1 === this.Password2 && this.Password1 !== '' && this.Password2 !== ''){
       this.auth.resetPassword(this.Password1);
       this.errorMessage = '';
+      this.router.navigate(['../admin']);
     }else{
       this.errorMessage = 'The Password are not identical! please try again.'
     }

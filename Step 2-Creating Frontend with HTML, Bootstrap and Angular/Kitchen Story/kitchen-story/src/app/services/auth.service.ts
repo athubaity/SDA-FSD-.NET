@@ -21,7 +21,6 @@ export class AuthService {
     for(let i = 0, len = this.users.length; i < len; i++){
       if(this.users[i].email === email && this.users[i].password === password){
         localStorage.setItem('myuser', JSON.stringify(this.users[i]));
-        console.log(this.users[i]);
       }
     }
   }
@@ -31,7 +30,6 @@ export class AuthService {
   }
   getMyUser(){
     const myData = JSON.parse(localStorage.getItem('myuser') || '{}');
-    console.log(myData);
     return myData;
   }
 
@@ -56,7 +54,6 @@ export class AuthService {
   }
   getUserType() : number{
     const myData = JSON.parse(localStorage.getItem('myuser') || '{}');
-    console.log(myData.type);
     return myData.type;
   }
   getUsers(){

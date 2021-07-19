@@ -19,7 +19,6 @@ export class NavComponent implements OnInit {
 
   statusLog(){
     this.isLoggedin = this.auth.isLoggedin();
-    console.log(this.isLoggedin);
   }
   ngOnInit(): void {
   }
