@@ -1,4 +1,4 @@
-<app-nav></app-nav>
+<app-nav [statusCart]="statusCart" (statusCartChange)="changeStatusC($event)"></app-nav>
 <div class="container">
     <div class="row">
         <div class="col-lg">
@@ -7,7 +7,8 @@
     </div>
     <div class="row">
         <div class="col-lg">
-            <app-products-list></app-products-list>
+            <app-cart *ngIf="statusCart"></app-cart>
+            <app-products-list *ngIf="!statusCart"></app-products-list>
         </div>
     </div>
     <div class="row">

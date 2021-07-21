@@ -9,7 +9,8 @@
           [routerLink]="['signup']" routerLinkActive="active" *ngIf="!isLoggedin">Sign up</a>
        
       <a class="btn btn-lg me-3 py-2 text-dark text-decoration-none" href="#">Support</a>
-      <a href="#" id="cart" class="btn btn-info btn-lg">
+      <a id="cart" class="btn btn-info btn-lg" (click)="statCart()">
+        <span class="badge badge-pill red" *ngIf="numberItems">{{numberItems}}</span>
         <span class="glyphicon glyphicon-shopping-cart"></span>Cart
       </a>
     </nav>

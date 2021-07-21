@@ -10,11 +10,14 @@ export class AuthService {
   
   users: User[]=[];
   constructor(private http:HttpClient) {
+    this.assignUsers();
+   }
+  
+  assignUsers(){
     this.getUsers().subscribe((response)=> {
       this.users = response;
     });
-   }
-
+  }
   Userurl: string = "http://localhost:3000/User";
 
   Login(email: any, password: any){
@@ -46,6 +49,7 @@ export class AuthService {
     return this.http.post<User>(this.Userurl, user).subscribe(
       data => {
         console.log('POST Request is successful ', data);
+        this.assignUsers();
       },
       error => {
         console.log('Error', error);

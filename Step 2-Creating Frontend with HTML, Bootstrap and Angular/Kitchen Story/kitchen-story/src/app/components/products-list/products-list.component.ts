@@ -1,4 +1,5 @@
-import { HeaderComponent } from './../header/header.component';
+import { CartService } from './../../services/cart.service';
+import { Item } from 'src/app/model/Carts';
 import { Component, Input, OnInit } from '@angular/core';
 import { Product } from 'src/app/model/Products';
 import { ProductService } from 'src/app/services/product.service';
@@ -12,7 +13,7 @@ export class ProductsListComponent implements OnInit {
   products: Product[] = [];
   name: any;
   p: number = 1;
-  constructor(public service: ProductService) {
+  constructor(public service: ProductService, private mycart: CartService) {
   }
   ngOnInit(): void {
     this.service.getProduct().subscribe((response)=> {
@@ -30,5 +31,4 @@ export class ProductsListComponent implements OnInit {
       })
     }
   }
-
 }

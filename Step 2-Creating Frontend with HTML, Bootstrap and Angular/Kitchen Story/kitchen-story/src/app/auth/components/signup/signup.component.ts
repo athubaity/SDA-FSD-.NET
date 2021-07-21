@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { NgForm } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from 'src/app/services/auth.service';
@@ -20,7 +21,7 @@ export class SignupComponent implements OnInit {
     password: '',
     phone: ''
   }
-  constructor(public auth: AuthService) { }
+  constructor(public auth: AuthService,private router: Router) { }
 
   ngOnInit(): void {
     this.auth.getUsers().subscribe((response)=> {
@@ -35,8 +36,7 @@ export class SignupComponent implements OnInit {
     if(this.user.fname.length&&
       this.user.lname.length&&
       this.user.email.length&&
-      this.user.password.length&&
-      this.user.phone.length
+      this.user.password.length
       > 0){
       let user: User;
       user = {id: this.user.id, 
@@ -48,6 +48,7 @@ export class SignupComponent implements OnInit {
         phone: this.user.phone};
       this.users.push(user);
       this.auth.addUser(user);
+      this.router.navigate(['../login']); 
     }
   }
 

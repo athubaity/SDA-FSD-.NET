@@ -1,5 +1,6 @@
+import { CartService } from './../services/cart.service';
 import { AuthService } from 'src/app/services/auth.service';
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output } from '@angular/core';
 import { User } from '../model/Users';
 
 @Component({
@@ -10,11 +11,17 @@ import { User } from '../model/Users';
 export class MainComponent implements OnInit {
 
   myuser: User;
-  constructor(public auth: AuthService) { 
+  statusCart= false;
+  constructor(public auth: AuthService, private mycart: CartService) { 
     this.myuser = auth.getMyUser();
+    this.statusCart = mycart.openCart();
+    console.log(this.statusCart);
   }
 
   ngOnInit(): void {
   }
 
+  changeStatusC(newS: boolean){
+    this.statusCart = newS;
+  }
 }
