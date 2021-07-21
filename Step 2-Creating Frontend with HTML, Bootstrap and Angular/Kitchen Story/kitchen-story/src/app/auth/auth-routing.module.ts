@@ -1,3 +1,4 @@
+import { OrderComponent } from './../components/order/order.component';
 import { AdminComponent } from './../components/admin/admin.component';
 import { ForgetPasswordComponent } from './components/forget-password/forget-password.component';
 import { MainComponent } from './../main/main.component';
@@ -13,7 +14,8 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent},
   { path: 'signup', component: SignupComponent},
   { path: 'reset-password', component: ResetPasswordComponent},
-  { path: 'forget-password', component: ForgetPasswordComponent}
+  { path: 'forget-password', component: ForgetPasswordComponent},
+  { path: 'order', component: OrderComponent}
 ];
 
 @NgModule({

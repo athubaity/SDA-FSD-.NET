@@ -18,6 +18,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CartComponent } from './components/cart/cart.component';
 import { AuthModule } from './auth/auth.module';
 import { MainComponent } from './main/main.component';
+import { OrderComponent } from './components/order/order.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { MainComponent } from './main/main.component';
     NavComponent,
     ProductsListComponent,
     CartComponent,
-    MainComponent
+    MainComponent,
+    OrderComponent
   ],
   imports: [
     BrowserModule,

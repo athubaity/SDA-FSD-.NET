@@ -1,0 +1,55 @@
+<div id="main" class="row d-flex flex-column flex-md-row align-items-center pb-3 mb-4 border-bottom">
+    <a href="/" class="d-flex align-items-center text-dark text-decoration-none">
+      <img class="mb-2" src="https://freepikpsd.com/media/2019/11/grocery-store-logo-transparent-png-images-.png" alt="" width="150" height="120">
+      <span id="logo">Kitchen Story</span>
+    </a>
+    <br><br><br>
+    <div class="col-md-8" id="shopping-list">
+      <div class="col-lg my-col">
+          <div class="card shadow mb-4">
+              <div class="card-header py-3">
+                  <h4 class="font-weight-bold ">Order list</h4>
+              </div>
+              <div class="card-body">
+                <table class="table table-bordered mt-2 mt-md-0 ms-md" >
+                    <thead class="thead-light">
+                        <tr>
+                            <th>name</th>
+                            <th>image</th>
+                            <th>category</th>
+                            <th>quantity</th>
+                            <th>subTotal</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let item of mycart |  paginate: {itemsPerPage:10,currentPage:p}">
+                            <td>{{item.product.name}}</td>
+                            <td><img class="img-fluid w-50" src="{{item.product.image}}" alt=""></td>
+                            <td>{{item.product.category}}</td>
+                            <td>{{item.quantity}}</td>
+                            <td>{{item.subTotal}}</td>
+                        </tr>
+                    </tbody>
+                    <pagination-controls (pageChange) = "p = $event"></pagination-controls>
+                </table>
+                <table class="table table-bordered mt-2 mt-md-0 ms-md" >
+                    <thead class="thead-light">
+                        <tr>
+                            <th>Total</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngIf="total">
+                            <td>{{total}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <a href="/">
+                    <button type="button" class="btn btn-primary btn-block waves-effect waves-light" 
+                    >Back to shop</button>
+                </a> 
+              </div>
+          </div>
+      </div>
+    </div>
+  </div>

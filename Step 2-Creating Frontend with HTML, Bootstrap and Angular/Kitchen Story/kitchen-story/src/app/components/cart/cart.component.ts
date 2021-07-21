@@ -1,6 +1,6 @@
 import { Item } from './../../model/Carts';
 import { CartService } from './../../services/cart.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { Product } from 'src/app/model/Products';
 import { formatDate } from '@angular/common';
 @Component({
